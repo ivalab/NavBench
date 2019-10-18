@@ -4,7 +4,7 @@ Recreating navigation performance results in _egoTEB: Ego-centric, Perception Sp
 - [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
 - [ROS Kinetic](http://wiki.ros.org/kinetic/)
 - [catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
-- [navigation_test (missing link + branch + commit)](link), checkout to commit `6fecd60df2ebf12a52a8531e0aaa413eb2e6175c`
+- [navigation_test](https://github.com/ivaROS/navigation_test/), checkout commit `6fecd60df2ebf12a52a8531e0aaa413eb2e6175c`
 - [gazebo_fake_localization](https://github.com/TurtlebotAdventures/gazebo_fake_localization)
 
 Clone `navigation_test` and `gazebo_fake_localization` into your catkin workspace, build the packages and source the workspace.
