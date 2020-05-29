@@ -1,0 +1,43 @@
+# Packages for implementation of ICRA2020 conference paper 'egoTEB: Egocentric, Perception Space Navigation Using Timed-Elastic-Bands
+
+
+- git:
+    local-name: egocircle
+    uri: 'git@github.gatech.edu:ivabots/egocircle.git'
+    version: release
+- git:
+    local-name: egocircle_utils
+    uri: 'git@github.gatech.edu:ivabots/egocircle_utils.git'
+    version: release
+- git:
+    local-name: gazebo_fake_localization
+    uri: 'https://github.com/TurtlebotAdventures/gazebo_fake_localization.git'
+    version: master
+- git:
+    local-name: navigation_test
+    uri: 'https://github.com/ivaROS/navigation_test.git'
+    version: release
+- git:
+    local-name: pips
+    uri: 'https://github.com/ivaROS/pips.git'
+    version: release
+- git:
+    local-name: pips_msgs
+    uri: 'https://github.com/ivaROS/pips_msgs.git '
+    version: release
+- git:
+    local-name: pips_trajectory_msgs
+    uri: 'https://github.com/ivaROS/pips_trajectory_msgs.git'
+    version: release
+- git:
+    local-name: pips_trajectory_testing
+    uri: 'https://github.com/ivaROS/pips_trajectory_testing.git'
+    version: release
+- git:
+    local-name: tf2_pips
+    uri: 'https://github.com/ivaROS/tf2_pips.git'
+    version: release
+- git:
+    local-name: trajectory_generator
+    uri: 'https://github.com/ivaROS/trajectory_generator.git'
+    version: release
