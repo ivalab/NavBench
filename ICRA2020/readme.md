@@ -50,9 +50,13 @@ rosrun nav_scripts gazebo_master_demo.py
 By default, the simulation gui is hidden. To display it, set the argument `gui` in   ```navigation_test/configs/launch/gazebo_turtlebot_empty_room_20x20_world.launch``` to `true`. 
 
 ### Run Comprehensive Benchmark
-A benchmark of _DWA_, _TEB_, and _egoTEB_ is available:
-2. Create directory `~/simulation_data` for logging test outcomes.
-3. The benchmark is capable of running multiple experiments concurrently, though this should only be enabled on machines with sufficient resourcs. For example, a 24 hardware thread Intel Xeon E5-2640x2 @ 2.50GHz (Single Core Passmark 1468, Multi-Threaded score of 9512) can generally run up to 3 concurrent experiments without issue. The number of concurrent experiments is determined by the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` file.
-4. ```rosrun nav_scripts gazebo_master.py``` and wait for complete.
-5. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results.
+A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can be run as follows:
+
+1. Create directory `~/simulation_data` for logging test outcomes.
+
+2. (Optional) Set the number of concurrent experiments to run using the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` file. For most systems, this should be left at 1. For reference, a 24 hardware thread Intel Xeon E5-2640x2 @ 2.50GHz (Single Core Passmark 1468, Multi-Threaded score of 9512) can generally run up to 3 concurrent experiments without issue. Overloading your system can negatively impact the experiments.
+
+3. ```rosrun nav_scripts gazebo_master.py``` and wait for complete.
+
+4. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results.
 
