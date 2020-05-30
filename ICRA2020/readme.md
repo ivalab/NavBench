@@ -1,29 +1,58 @@
 # ICRA 2020
 Recreating navigation performance results in _egoTEB: Ego-centric, Perception Space Navigation Using Timed-Elastic-Bands_. 
-## Requirement and Dependencies
+## System Requirements and Dependencies
 - [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
 - [ROS Kinetic](http://wiki.ros.org/kinetic/)
 - [catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
-- [navigation_test](https://github.com/ivaROS/navigation_test/), checkout commit `6fecd60df2ebf12a52a8531e0aaa413eb2e6175c`
-- [gazebo_fake_localization](https://github.com/TurtlebotAdventures/gazebo_fake_localization)
 
-Clone `navigation_test` and `gazebo_fake_localization` into your catkin workspace, build the packages and source the workspace.
+| Note: If you encounter any problems, please create an issue. |
+| --- |
+
+
+## Setting up Workspace
+
+1. Install [wstool](http://wiki.ros.org/wstool) and other system dependencies
+```
+sudo apt-get install python-rosdep  python-wstool  build-essential python-rosinstall-generator python-rosinstall
+```
+
+2. Navigate to the root of your catkin workspace
+
+3. Initialize `wstool` workspace
+```
+wstool init src
+```
+
+3. Add necessary packages to your catkin workspace:
+```
+wstool merge -t src https://github.com/ivalab/NavBench/blob/master/ICRA2020/rosinstall
+wstool update -t src -j8
+```
+
+4. Install any missing system dependencies:
+```
+rosdep install --from-paths src -i -y
+```
+
+5. Compile and source the workspace
+```
+catkin build
+source devel/setup.sh
+```
 
 ## Running Benchmarks
-| Note: This is still WiP, please check back frequently for more features. |
-| --- |
 
 ### Demo 
 To run a single navigation experiment of _TEB_ navigating in a room populated with random obstacles, run the following command:
 ```bash
 rosrun nav_scripts gazebo_master_demo.py
 ```
-To visualize the process, edit ```navigation_test/configs/launch/gazebo_turtlebot_empty_room_20x20_world.launch``` that argument `gui` is true. 
+By default, the simulation gui is hidden. To display it, set the argument `gui` in   ```navigation_test/configs/launch/gazebo_turtlebot_empty_room_20x20_world.launch``` to `true`. 
 
 ### Run Comprehensive Benchmark
-A benchmark of _DWA_ and _TEB_ is currently available, (_egoTEB_ is on the way):
-1. Make sure argument `gui` is revert to `false`.
+A benchmark of _DWA_, _TEB_, and _egoTEB_ is available:
 2. Create directory `~/simulation_data` for logging test outcomes.
-3. `navigation_test` launches multiple Gazebo simulation to benchmark algorithms concurrently. On average 4 cores per individual Gazebo is needed on our Intel Xeon E5-2640 @ 2.50GHz (Single Core Passmark 1468, Multi-Threaded score of 9512). Set an appropriate number of GazeboMaster to `MultiMasterCoordinator` constructor in `navigation_test/scripts/scripts/gazebo_master.py` main function.
+3. The benchmark is capable of running multiple experiments concurrently, though this should only be enabled on machines with sufficient resourcs. For example, a 24 hardware thread Intel Xeon E5-2640x2 @ 2.50GHz (Single Core Passmark 1468, Multi-Threaded score of 9512) can generally run up to 3 concurrent experiments without issue. The number of concurrent experiments is determined by the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` file.
 4. ```rosrun nav_scripts gazebo_master.py``` and wait for complete.
-5. Acquire testing outcome file name, edit ```navigation_test/scripts/scripts/analyze_results.py``` to read in the correct test. ```rosrun nav_scripts analyze_results.py``` to generate a readme table style output.
+5. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results.
+
