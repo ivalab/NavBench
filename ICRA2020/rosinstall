@@ -8,6 +8,10 @@
     uri: https://github.com/ivaROS/egocircle_utils.git
     version: 0.1.0
 - git:
+    local-name: full_depthimage_to_laserscan    
+    uri: https://github.com/ivaROS/full_depthimage_to_laserscan.git
+    version: 0.1.0
+- git:
     local-name: gazebo_fake_localization
     uri: https://github.com/TurtlebotAdventures/gazebo_fake_localization.git
     version: 0.1.0
