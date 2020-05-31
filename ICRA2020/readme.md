@@ -49,7 +49,7 @@ rosrun nav_scripts gazebo_master_demo.py
 ```
 By default, the simulation gui is hidden. To display it, set the argument `gui` in   ```navigation_test/configs/launch/gazebo_turtlebot_empty_room_20x20_world.launch``` to `true`. It is highly recommended to return it to `false` before running the full benchmark (below).
 
-### Run Comprehensive Benchmark
+### Run Navigation Benchmark
 A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can be run as follows:
 
 1. Create directory `~/simulation_data` for logging test outcomes.
@@ -59,5 +59,19 @@ A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can b
 3. ```rosrun nav_scripts gazebo_master.py``` and wait for it to complete. _If something goes wrong and the process does not exit cleanly, try `rosrun nav_scripts killall.sh`_
 
 4. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results.
+
+
+### Timing Demo
+1. Download sample rosbag of prerecorded data from:
+'''
+https://drive.google.com/file/d/10glIc6hyeFE1OTMfC8wrL3jjvh4lklRz/view?usp=sharing
+'''
+
+2. Replace `[full path to]demo_rosbag_2020-05-30-17-05-50.bag` in `nav_scripts/scripts/launch/rosbag/rosbag.launch` with the full path to the downloaded rosbag
+
+3. Run timing demo
+```
+rosrun nav_scripts timing_demo.py
+```
 
 
