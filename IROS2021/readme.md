@@ -42,20 +42,13 @@ wstool update -t src
 
 ## Running Benchmarks
 
-### Demo 
-<!-- To run a single navigation experiment of _TEB_ navigating in a room populated with random obstacles, run the following command:
-```bash
-rosrun nav_scripts gazebo_master_demo.py
-```
-By default, the simulation gui is hidden. To display it, set the argument `gui` in   ```navigation_test/configs/launch/gazebo_turtlebot_empty_room_20x20_world.launch``` to `true`. It is highly recommended to return it to `false` before running the full benchmark (below). -->
-
 ### Run Navigation Benchmark
-<!-- A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can be run as follows:
+A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can be run as follows:
 
 1. Create directory `~/simulation_data` for logging test outcomes.
 
-2. (Optional) Set the number of concurrent experiments to run using the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` file. For most systems, this should be left at 1. For reference, a 24 hardware thread Intel Xeon E5-2640x2 @ 2.50GHz (Single Core Passmark 1468, Multi-Threaded score of 14649) can generally run up to 3 concurrent experiments without issue. Overloading your system can negatively impact the experiments.
+2. (Optional) Set the number of concurrent experiments to run using the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` and or `stdr_master.py` file. For most systems, this should be left at 1. For reference, a 16 hardware thread AMD 3800X can generally run up to 3 concurrent Gazebo experiments, 25 concurrent STDR experiment without issue. Overloading your system can negatively impact the experiments.
 
 3. ```rosrun nav_scripts gazebo_master.py``` and wait for it to complete. _If something goes wrong and the process does not exit cleanly, try `rosrun nav_scripts killall.sh`_
 
-4. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results. -->
+4. Replace `~/simulation_data/results_...` in ```navigation_test/scripts/scripts/analyze_results.py``` with the full path of your results file. ```rosrun nav_scripts analyze_results.py``` to generate a markdown table of results.
