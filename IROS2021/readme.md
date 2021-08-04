@@ -20,7 +20,7 @@ sudo apt-get install python-rosdep  python-wstool  build-essential python-rosins
 
 3. Initialize `wstool` workspace and download all packages
 ```
-wstool init src https://raw.githubusercontent.com/ivalab/NavBench/master/Arxiv2021/rosinstall 
+wstool init src https://raw.githubusercontent.com/ivalab/NavBench/master/IROS2021/rosinstall 
 ```
 
 4. Install any missing system dependencies:
@@ -36,18 +36,18 @@ source devel/setup.sh
 
 6. (Optional but recommended) Periodically check for updates to this demo:
 ```
-wstool merge -t src https://raw.githubusercontent.com/ivalab/NavBench/master/Arxiv2021/rosinstall
+wstool merge -t src https://raw.githubusercontent.com/ivalab/NavBench/master/IROS2021/rosinstall
 wstool update -t src
 ```
 
 ## Running Benchmarks
 
 ### Run Navigation Benchmark
-A benchmark comparing navigation performance of _DWA_, _TEB_, and _egoTEB_ can be run as follows:
+A benchmark comparing navigation performance of _TEB_, and _PotentialGap_ can be run as follows:
 
 1. Create directory `~/simulation_data` for logging test outcomes.
 
-2. (Optional) Set the number of concurrent experiments to run using the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` and or `stdr_master.py` file. For most systems, this should be left at 1. For reference, a 16 hardware thread AMD 3800X can generally run up to 3 concurrent Gazebo experiments, 25 concurrent STDR experiment without issue. Overloading your system can negatively impact the experiments.
+2. (Optional) Set the number of concurrent experiments to run using the `num_instances` variable at the beginning of the `main` function at the bottom of the `navigation_test/scripts/scripts/gazebo_master.py` and/or `stdr_master.py` file. For most systems, this should be left at 1. For reference, a 16 hardware thread AMD 3800X can generally run up to 3 concurrent Gazebo experiments, 25 concurrent STDR experiment without issue. Overloading your system can negatively impact the experiments.
 
 3. ```rosrun nav_scripts gazebo_master.py``` and wait for it to complete. _If something goes wrong and the process does not exit cleanly, try `rosrun nav_scripts killall.sh`_
 
