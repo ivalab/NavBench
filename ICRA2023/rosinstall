@@ -1,0 +1,80 @@
+- git:
+    local-name: aerial_pips
+    uri: https://github.com/ivaROS/aerial_pips.git
+    version: icra2023
+- git:
+    local-name: benchmarking_tools
+    uri: https://github.com/ivaROS/benchmarking_tools.git
+    version: c49085d0cf265953de842c6b9a9c407b55bd5efe
+- git:
+    local-name: camera_compression
+    uri: https://github.com/ivaROS/camera_compression.git
+    version: 1cd2da7875c143858b54ef01f40331e438f8c026
+- git:
+    local-name: egocylindrical
+    uri: https://github.com/ivaROS/egocylindrical.git
+    version: 6bf198410a3047f8c6d30d23f4e37964a1ebfc09
+- git:
+    local-name: fastmarch
+    uri: https://github.com/ivaROS/fastmarch.git
+    version: b6378505b93ebaeaaf8300d9a8e16134b83da80e
+- git:
+    local-name: global_planner_plus
+    uri: https://github.com/ivaROS/global_planner_plus.git
+    version: 39d1c35221c0208eac15511429658a81ee9d4bc6
+- git:
+    local-name: mav/mav_comm
+    uri: https://github.com/ivaROS/mav_comm.git
+    version: 19ca5f4c44f3b243be8b5d7a68bd7509f2a386b8
+- git:
+    local-name: mav/rotors_simulator
+    uri: https://github.com/ivaROS/rotors_simulator.git
+    version: 477cbe0f8676462431c6ee9f426706ec99031a45
+- git:
+    local-name: navigation_test
+    uri: https://github.com/ivaROS/navigation_test.git
+    version: release/aerial_pips
+- git:
+    local-name: pips
+    uri: https://github.com/ivaROS/pips.git
+    version: 1273a86c38d5ffddd3545c254562e4ad92543be7
+- git:
+    local-name: pips_egocylindrical
+    uri: https://github.com/ivaROS/pips_egocylindrical.git
+    version: e252ede760c51a900ff980c24921d46c0fcecf6b
+- git:
+    local-name: pips_msgs
+    uri: https://github.com/ivaROS/pips_msgs.git
+    version: f70058a1d97532ff3d7bc439672d5b2634d24d32
+- git:
+    local-name: pips_trajectory_msgs
+    uri: https://github.com/ivaROS/pips_trajectory_msgs.git
+    version: f76106daf23452dc37ecf7880eb7ef7b9c9dc2f8
+- git:
+    local-name: pips_trajectory_testing
+    uri: https://github.com/ivaROS/pips_trajectory_testing.git
+    version: 3ef32e9a2cb0ba32c2877b9ee46c8e104dfac72b
+- git:
+    local-name: realsense_gazebo_plugin
+    uri: https://github.com/ivaROS/realsense_gazebo_plugin.git
+    version: 32ec2e49b393d6521473e535f275a5e835082bce
+- git:
+    local-name: tf2_nav_msgs
+    uri: https://github.com/ivaROS/tf2_nav_msgs.git
+    version: 28ebe00f755980476017782c6fe8de462e72f384
+- git:
+    local-name: tf2_pips
+    uri: https://github.com/ivaROS/tf2_pips.git
+    version: fc9544bf6baf53ed36b00f67214fa262c64763df
+- git:
+    local-name: tf2_utils
+    uri: https://github.com/ivaROS/tf2_utils.git
+    version: c7186de6f3b42e3a02bb0f6f69a83147f15f4a96
+- git:
+    local-name: trajectory_based_nav
+    uri: https://github.com/ivaROS/trajectory_based_nav.git
+    version: 66c9a3530b7f539a39f534c3b894b723ab18903b
+- git:
+    local-name: trajectory_generator
+    uri: https://github.com/ivaROS/trajectory_generator.git
+    version: 7352c515b76ceab9e5ef41ed46408315903bc18b
