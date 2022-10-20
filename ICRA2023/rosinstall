@@ -31,6 +31,10 @@
     uri: https://github.com/ivaROS/rotors_simulator.git
     version: 477cbe0f8676462431c6ee9f426706ec99031a45
 - git:
+    local-name: nav_quadrotor
+    uri: https://github.com/ivaROS/nav_quadrotor.git
+    version: icra2023
+- git:
     local-name: navigation_test
     uri: https://github.com/ivaROS/navigation_test.git
     version: release/aerial_pips
