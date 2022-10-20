@@ -6,7 +6,7 @@ Checking_.
 - [Ubuntu 20.04](http://releases.ubuntu.com/20.04/)
 - [ROS Noetic](http://wiki.ros.org/noetic/): Full desktop install
 
-Note: You can install the python3 dependencies using either `apt-get install python-<package name>` or `pip3` (you can use a `venv` if you wish, just remember to activate it).
+Note: You can install the python3 dependencies using either `apt-get install python3-<package name>` or `pip3` (you can use a `venv` if you wish, just remember to activate it).
 
 ## Setting up
 
