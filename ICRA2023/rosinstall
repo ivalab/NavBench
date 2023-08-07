@@ -17,7 +17,7 @@
 - git:
     local-name: fastmarch
     uri: https://github.com/ivaROS/fastmarch.git
-    version: b6378505b93ebaeaaf8300d9a8e16134b83da80e
+    version: release/icra2023
 - git:
     local-name: global_planner_plus
     uri: https://github.com/ivaROS/global_planner_plus.git
