@@ -2,6 +2,8 @@
 Instructions for preparing a workspace to run the experiments in our ICRA 2023 submission: _AeriaLPiPS: A Local Planner for Aerial Vehicles with Geometric Collision
 Checking_.
 
+After you have finished preparing the workspace, you can run the experiments by following [these instructions](https://github.com/ivaros/aerial_pips).
+
 ## System Requirements and Dependencies
 - [Ubuntu 20.04](http://releases.ubuntu.com/20.04/)
 - [ROS Noetic](http://wiki.ros.org/noetic/): Full desktop install
