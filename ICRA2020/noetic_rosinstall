@@ -1,0 +1,96 @@
+- git:
+    local-name: benchmarking_tools
+    uri: git@github.gatech.edu:ivabots/benchmarking_tools.git
+    version: feat/noetic
+- git:
+    local-name: egocircle
+    uri: git@github.gatech.edu:ivabots/egocircle.git
+    version: feature/noetic
+- git:
+    local-name: egocircle_utils
+    uri: git@github.gatech.edu:ivabots/egocircle_utils.git
+    version: feat/noetic
+- git:
+    local-name: egocylindrical
+    uri: git@github.gatech.edu:ivabots/egocylindrical.git
+    version: feat/noetic
+- git:
+    local-name: fulldepthimage_to_laserscan
+    uri: git@github.gatech.edu:ivabots/depthimage_to_laserscan.git
+    version: use_inf
+- git:
+    local-name: gazebo_fake_localization
+    uri: https://github.com/TurtlebotAdventures/gazebo_fake_localization.git
+    version: master
+- git:
+    local-name: global_planner_plus
+    uri: git@github.gatech.edu:ivabots/global_planner_plus.git
+    version: merge/noetic
+- git:
+    local-name: pips
+    uri: git@github.gatech.edu:ivabots/pips.git
+    version: feat/robot-model-update-callbacks
+- git:
+    local-name: pips_egocircle
+    uri: git@github.gatech.edu:ivabots/pips_egocircle.git
+    version: 9d058929191d787f9dbb4aed40286080f88b6567
+- git:
+    local-name: pips_egocylindrical
+    uri: git@github.gatech.edu:ivabots/pips_egocylindrical.git
+    version: master
+- git:
+    local-name: pips_msgs
+    uri: git@github.gatech.edu:ivabots/pips_msgs.git
+    version: master
+- git:
+    local-name: pips_trajectory_msgs
+    uri: git@github.gatech.edu:ivabots/pips_trajectory_msgs.git
+    version: master
+- git:
+    local-name: pips_trajectory_testing
+    uri: git@github.gatech.edu:ivabots/pips_trajectory_testing.git
+    version: feat/collision_stamped_service
+- git:
+    local-name: pips_visualization
+    uri: git@github.gatech.edu:ivabots/pips_visualization.git
+    version: feat/python3
+- git:
+    local-name: potential_gap
+    uri: git@github.gatech.edu:ivabots/potential_gap.git
+    version: cleanup
+- git:
+    local-name: teb_local_planner
+    uri: git@github.gatech.edu:ivabots/teb_local_planner.git
+    version: feat/noetic/plugin
+- git:
+    local-name: tf2_nav_msgs
+    uri: git@github.gatech.edu:ivabots/tf2_nav_msgs.git
+    version: master
+- git:
+    local-name: tf2_pips
+    uri: git@github.gatech.edu:ivabots/tf2_pips.git
+    version: master
+- git:
+    local-name: tf2_utils
+    uri: git@github.gatech.edu:ivabots/tf2_utils.git
+    version: master
+- git:
+    local-name: trajectory_generator
+    uri: git@github.gatech.edu:ivabots/trajectory_generator.git
+    version: generator_objects
+- git:
+    local-name: turtlebot_trajectory_controller
+    uri: git@github.gatech.edu:ivabots/turtlebot_trajectory_controller.git
+    version: feature/noetic
+- git:
+    local-name: turtlebot_trajectory_functions
+    uri: git@github.gatech.edu:ivabots/turtlebot_trajectory_functions.git
+    version: feat/tf2_nav_msgs
+- git:
+    local-name: turtlebot_trajectory_generator
+    uri: git@github.gatech.edu:ivabots/turtlebot_trajectory_generator.git
+    version: se2-trajectories
+- git:
+    local-name: turtlebot_trajectory_testing
+    uri: git@github.gatech.edu:ivabots/turtlebot_trajectory_testing.git
+    version: enhanced-controller
